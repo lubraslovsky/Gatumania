@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="../fotos/logogatumania.jpeg" alt="logo">
+            <nav class="header__navbar">
+                <ul class="header__navbar--principal">
+                    <li> <a href="../index.html"> Inicio</a></li>
+                    <li> <a href="./quienes_somos.html"> Quiénes somos</a></li>
+                    <li> <a href="./adopta.html">Adopta</a></li>
+                    <li> <a href="./formulario.html"> Formulario</a> </li>
+                    <li> <a href="./tenencia_responsable.html">Tenencia responsable</a></li>
+                    <li> <a href="./contacto.html">Contacto </a></li>
+                </ul>
+            </nav>
+    </header>
+
+     <section class="section__contacto">
+         <h2 class="h2Contacto">Escribinos si tenés alguna duda</h2>
+    
+            <form class="contactoForm" action="">
+                    <input class="contactoInput" type="text" name="nombreyapellido" id="nombreyapellido" placeholder="Nombre y apellido" required>
+                    <input class="contactoInput" type="email" name="email" id="email" placeholder="E-mail" required>
+                    <label class="contactoLabel" for=""> Motivo</label>
+                        <select class="contactoSelect" name="MotivoContacto">
+                        <option value="Adopciones"> Adopciones </option>
+                        <option value="Traslados"> Traslados </option>
+                        <option value="Transitos"> Transitos </option> 
+                        <option value="Donaciones"> Donaciones </option> 
+                        <option value="Otros"> Otros </option> 
+                    <textarea class="contactoTextarea" name="mensaje" id="mensaje" cols="30" rows="10"> 
+                        Escribí acá tu mensaje
+                    </textarea>
+                    <input class="contactoSubmit submit" type="submit" value="Enviar">
+            </form>
+
+
+
+    <div class="contactoLink">
+         <h2 class="h2Contacto"> Si ya te decidiste a adoptar </h2>
+         <a class="a__contacto" href="./formulario.html"> Formulario de adopción </a>
+    </div>     
+         
+     </section>
+
+
+    <footer class="footer">  
+        <h3> Escribinos </h3> 
+        <a href="gatu_mania@gmail.com"> gatu_mania@gmail.com</a>
+        <a href="https://www.instagram.com/gatu_mania/">Seguinos en instagram</a>
+     </footer>
+    
+    
+</body>
+</html>

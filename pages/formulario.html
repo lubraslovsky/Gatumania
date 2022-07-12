@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulario</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="../fotos/logogatumania.jpeg" alt="logo">
+            <nav class="header__navbar">
+                <ul class="header__navbar--principal">
+                    <li> <a href="../index.html"> Inicio</a></li>
+                    <li> <a href="./quienes_somos.html"> Quiénes somos</a></li>
+                    <li> <a href="./adopta.html">Adopta</a></li>
+                    <li> <a href="./formulario.html"> Formulario</a> </li>
+                    <li> <a href="./tenencia_responsable.html">Tenencia responsable</a></li>
+                    <li> <a href="./contacto.html">Contacto </a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section>
+        <h2 class="h2Formulario"> Si estás listo para adoptar, completá este formulario</h2>
+
+            <form class="flex__form" action="">
+                
+                    <div>
+                    <input class="form__input form__datos" type="text" name="nombre" placeholder="Nombre y apellido" id="nombre" required>
+            </div>
+                    <div>
+                    <input class="form__input form__datos" type="text" name="domicilio" placeholder="Domicilio" id="domicilio" required>
+           </div>
+                    <div>
+                    <input class="form__input form__datos" type="text" name="localidad" placeholder="Localidad" id="localidad" required>
+        </div>
+                    <div>
+                    <input class="form__input form__datos" type="email" name="mail" placeholder="Mail" id="mail" required>
+         </div>
+         <div>
+                    <input class="form__input form__datos" type="text" name="celular" placeholder="Celular" id="celular" required>
+         </div>
+                   <div>
+                    <input class="form__input form__datos" type="text" name="ig" placeholder="Usuario de instagram" id="ig" required>
+    </div> 
+    <div>
+                    <input class="form__input form__datos" type="text" name="grupo" placeholder="Composicion del grupo familiar" id="grupo" required>
+        </div>
+        <div>
+                    <label class="form__input" for="acuerdo"> Están todos de acuerdo en adoptar?</label>
+         </div>
+         <div>
+                    <input class="form__input" type="radio" id="acuerdo" name="acuerdo"> Sí
+                    <input class="form__input" type="radio" id="acuerdo" name="acuerdo"> No
+                    <input class="form__input" type="radio" id="acuerdo" name="acuerdo"> Otro <input type="text" name="" id="">
+        </div>
+        <div>
+                    <label class="form__input" for=""> ¿Tienen algún animal en la casa? ¿Qué animal es?</label> <input type="text" name="animal" id="animal" required>
+       </div>
+       <div>
+                    <label class="form__input" for="">Si tienen animales, ¿están castrados?</label>
+        
+
+                    <input class="form__input form__radio" type="radio" id="castrado" name="castrado"> Sí
+                    <input class="form__input form__radio" type="radio" id="castrado" name="castrado"> No
+                    <input class="form__input form__radio" type="radio" id="castrado" name="castrado"> Otro <input type="text" name="" id="">
+    </div>
+    <div>
+                    <label class="form__input" for=""> Tipo de propiedad</label>
+                        <select name="Tipo de propiedad">
+                        <option value="Casa"> Casa</option>
+                        <option value="Departamento"> Departamento</option>
+                        <option value="PH"> PH</option> 
+            </div> 
+        </select> 
+        <div>
+        <input class="form__button submit" type="submit" value="Enviar formulario">
+    </div> 
+    <div>
+        <input class="form__button reset" type="reset" value="Borrar formulario">
+    </div>
+        
+        
+        
+    </form>
+    </section>
+
+    <footer class="footer">  
+        <h3> Escribinos </h3> 
+        <a href="gatu_mania@gmail.com"> gatu_mania@gmail.com</a>
+        <a href="https://www.instagram.com/gatu_mania/">Seguinos en instagram</a>
+     </footer>
+    
+    
+</body>
+</html>
