@@ -7,37 +7,33 @@
 
 body{
     background-color:white;
+    
 }
 /* ----- HEADER ---------- */
 
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     margin-top: 2em;
+    grid-area: header;
 }
 
-nav{
-    width: 85%;
-}
-
-ul{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 1em;
-}
 .logo{
     display: flex;
     align-items: flex-end;
     margin: 0.5em 0 0 2em;
-    width: 8.75em;
-    height: 8.75em;
+    width: 6em;
+    height: 6em;
 }
 
-.header__navbar ul{
+.header__navbar--principal{
     list-style-type: none;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    gap: 20px;
     
 }
  .header__navbar li{
@@ -58,182 +54,13 @@ ul{
     background-color: rgb(223, 189, 200);
     transition: 0.6s;
 }
-
-@media only screen and (max-width: 860px){
-    .header__navbar ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-@media only screen and (max-width: 576px){
-    header{
-        padding: 1em;
-    }
-    .header__navbar ul{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .header__navbar li{
-        margin: 0.3em;
-    }
-    .logo{
-        width: 6.5em;
-        height: 6.5em;
-        margin-right: 1em;
-    }
-    
-    }
-
-/* index */
-
-.titulo{
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    background-color: rgb(251, 230, 237);
-    margin: 0.5em 1em 0.1em 1em;
-    padding: 0.4rem;  
-}
-.gridIndex{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 4em 10em 3em 10em;
-    grid-template-areas:
-        "titulo titulo titulo titulo" 
-        "fondo  fondo  fondo  texto1"
-        "fondo  fondo  fondo  texto1"
-        "fondo  fondo  fondo  texto2"
-        "fondo  fondo  fondo  texto3";
-    justify-items: center;
-}
-.tituloIndex{
-    grid-area: titulo;
-}
-.fotoIndex{
-    grid-area: fondo;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 0.2em;
-    width: 64em;
-}
-.textoIndex1{
-    grid-area: texto1;
-    margin-top: 8em;
-    margin-right: 1em;
-    text-align: center;
-}
-.textoIndex2{
-    grid-area: texto2;
-    margin-top: 10em;
-}
-.textoIndex3{
-    grid-area: texto3;
-    margin-top: 10em;
-    display: flex;
-    flex-direction: column;
-}
-
-.inicio__boton{
-    text-decoration: none;
-    font-size: large;
-    color: black;
-    border: dotted 0.4em rgb(251, 230, 237);
-    text-align: center;
-    margin-top: 1em;
-    padding: 0.7em;
-    
-}
-.inicio__boton a{
-    text-decoration: none;
-    color: black;
-}
-
-@media only screen and (max-width: 860px){
-    .gridIndex{
-        display: flex;
-        flex-direction: column;
-    }
-    .tituloIndex{
-        margin-top: 1em;
-        text-align: center;
-    }
-    .fotoIndex{
-        width: 30em;
-        margin: 0 auto;
-        margin-top: 2em;
-    }
-    .textoIndex1{
-        margin-top: 3em;
-        font-size: 20px;
-        line-height: 3em;
-    }
-    .textoIndex2{
-        text-align: center;
-        font-size: 20px;
-    }
-    .textoIndex3{
-        text-align: center;
-    }
-}
-@media only screen and (max-width: 576px){
-    .gridIndex{
-        display: flex;
-        flex-direction: column;
-    }
-    .tituloIndex{
-        margin-top: 1em;
-        text-align: center;
-    }
-    .fotoIndex{
-        width: 30em;
-        margin: 0 auto;
-        margin-top: 2em;
-    }
-    .textoIndex1{
-        margin-top: 3em;
-        font-size: 20px;
-        line-height: 3em;
-    }
-    .textoIndex2{
-        text-align: center;
-        font-size: 20px;
-    }
-    .textoIndex3{
-        text-align: center;
-    }
-}
-
-/* formulario */
-
-.h2Formulario{
-    background-color: whitesmoke;
-    max-width: fit-content;
-    margin: 0 auto;
-    padding: 0.4rem;
-}
-.link__formulario{
-    text-decoration: none;
-    text-transform: uppercase;
-    
-}
-
-.section__contacto a{
-    color: black;
-    
-}
-section{
-    margin-bottom: 3rem;
-}
-
 /* footer */
 
 footer{
     background-color: bisque;
     text-align: center;
-
-
+    grid-area: footer;
+    margin-top: 20em;
 }
 
 .footer__h3{
@@ -262,6 +89,228 @@ footer{
     text-transform: lowercase;
 }
 
+/* index */
+
+.titulo{
+    display: flex;
+    align-items: center;
+    
+    text-transform: uppercase;
+    background-color: rgb(251, 230, 237);
+    margin: 0 auto;
+    padding: 0.4rem;  
+}
+.gridIndex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5em 4em 10em 3em 10em 5em;
+    grid-template-areas:
+        "header header header header"
+        " . titulo titulo . " 
+        "fondo  fondo  texto1  texto1"
+        "fondo  fondo  texto1  texto1"
+        "fondo  fondo  texto2  texto2"
+        "fondo  fondo  texto2  texto2"
+        "footer footer footer footer";
+    justify-content: center;
+    gap: 5px;
+}
+.tituloIndex{
+    grid-area: titulo;
+}
+.fotoIndex{
+    grid-area: fondo;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 70em;
+}
+.textoIndex1{
+    grid-area: texto1;
+    margin-top: 5em;
+    padding: 2em;
+    font-size: 20px;
+    line-height: 3em;
+    
+}
+.textoIndex2{
+    grid-area: texto2;
+    margin-top: 10em;
+    margin-left: 15em;
+    padding: 4em;
+    line-height: 5em;
+}
+
+.textoIndex2 a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    border: dotted 0.4em rgb(251, 230, 237);
+    text-align: center;
+    margin-top: 1em;
+    padding: 0.7em;
+    
+    
+}
+.inicio__boton a{
+    text-decoration: none;
+    color: black;
+}
+
+/* TABLET */ 
+@media (min-width: 577px) and (max-width: 991px) {
+    .gridIndex{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 5em 5em 5em 5em 5em;
+        grid-template-areas: 
+            "header header"
+            "titulo titulo"
+            "foto foto"
+            "texto1  texto1"
+            "texto2  texto2"
+            "footer footer";
+    }
+    .tituloIndex{
+        grid-area: titulo;
+        margin-top: 1em;
+        text-align: center;
+    }
+    .fotoIndex{
+        grid-area: foto;
+        width: 30em;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+    .textoIndex1{
+        grid-area: texto1;
+        margin-top: 20em;
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+    .textoIndex2{
+        grid-area: texto2;
+        font-size: 10px;
+        line-height: 3em;
+        margin-top: 30em;
+        margin-left: 31em;
+    }
+    
+    .textoIndex2 a{
+        text-decoration: none;
+        font-size: small;
+        color: black;
+        border: dotted 0.4em rgb(251, 230, 237);
+        text-align: center;
+        margin-top: 0.7em;
+        padding: 0.3em;
+        
+    }
+    .inicio__boton a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .header__navbar ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    footer{
+        grid-area: footer;
+        margin-top: 23em;
+        height: 9em;
+        padding: 3em;
+    }
+
+/* CELULAR */ 
+@media (min-width: 320px) and (max-width: 576px){
+    .gridIndex{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2em 3em 5em 5em 5em;
+        grid-template-areas: 
+            "header"
+            "titulo"
+            "foto"
+            "texto1"
+            "texto2"
+            "footer";
+    }
+    .tituloIndex{
+        grid-area: titulo;
+        margin-top: 1em;
+       font-size: 20px;
+    }
+    .fotoIndex{
+        grid-area: foto;
+        width: 30em;
+        margin-top: 1em;
+        margin-left: 2.6em;
+        padding: 2em;
+    }
+    .textoIndex1{
+        grid-area: texto1;
+        margin-top: 18em;
+        font-size: 15px;
+        line-height: 1em;
+    }
+    .textoIndex2{
+        line-height: 1.7em;
+        margin-top: 16em;
+        margin-left: 10em;
+    }
+    .textoIndex2 a{
+        padding: 0.1em;
+        font-size: small;
+    }
+    header{
+        padding: 1em;
+    }
+    .header__navbar ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .header__navbar li{
+        margin: 0.3em;
+    }
+    .logo{
+        width: 6.5em;
+        height: 6.5em;
+        margin-right: 1em;
+    }
+    .footer{
+        grid-area: footer;
+        display: block;
+        margin-top: 22em;
+    }
+}
+
+/* formulario */
+
+.h2Formulario{
+    background-color: whitesmoke;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0.4rem;
+}
+.link__formulario{
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.section__contacto a{
+    color: black;
+    
+}
+section{
+    margin-bottom: 3rem;
+}
+
+
+
 /* adopta */
 
 .h2Adopta{
@@ -270,17 +319,22 @@ footer{
     margin: 2em auto;
     padding: 0.4rem;
 }
-.adopta__img{
-    width: 400px;
-    margin: 1em;  
-}
+
 .galeriaAdopta{
     margin: 1em 0 0 1em;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: wrap;
     justify-content: center;
 
+}
+.adopta__img{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.adopta__img img{
+    width: 400px;
+    margin: 1em; 
 }
 .a__adopta{
     color: black;
@@ -293,8 +347,94 @@ footer{
 .adoptaLink{
     display: flex;
     flex-direction: column;
+    
 }
 
+.gridAdopta{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 5em 5em 30em 30em 15em 5em;
+    grid-template-areas: 
+        "header header header header"
+        "conoce conoce conoce conoce"
+        "galeria galeria galeria galeria"
+        "galeria galeria galeria galeria"
+        ". adopta adopta ."
+        "footer footer footer footer";
+        justify-content: center;
+}
+.adoptaConoce{
+    grid-area: conoce;
+}
+.galeriaAdopta{
+    grid-area: galeria;
+}
+.adoptaLink{
+    grid-area: adopta;
+    margin-top: 45em;   
+}
+.footerAdopta{
+    grid-area: footer;
+    margin-top: 43em;
+}
+
+/* TABLET */ 
+@media (min-width: 577px) and (max-width: 991px) {
+    .gridAdopta{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 5em 3em 5em 5em 5em;
+        grid-template-areas: 
+            "header header header"
+            "conoce conoce conoce"
+            "galeria galeria galeria"
+            "adopta adopta adopta"
+            "footer footer footer";
+        justify-content: center;
+    }
+   
+    .galeriaAdopta{
+        margin-top: 6em;
+    }
+    .adopta__img img{
+        width: 200px;
+    }
+    .adoptaForm{
+        font-size: medium;
+        margin-top: 4em;
+    }
+    
+    .footerAdopta{
+        margin-top: 50em;
+    }
+}
+
+/* CELULAR */ 
+@media (min-width: 320px) and (max-width: 576px){
+    .gridAdopta{
+        grid-template-columns: 1fr;
+        grid-template-rows: 5em 5em 25em 15em 5em;
+        grid-template-areas:
+            "header"
+            "conoce"
+            "galeria"
+            "adopta"
+            "footer";
+    }
+    .galeriaAdopta{
+        margin-top: 2em;
+    }
+    .adopta__img img{
+        width: 150px;
+    }
+    .adoptaForm{
+        display: none;
+    }
+    .adoptaLink a{
+        align-items: center;
+        margin-top: 14em;
+    }
+}
 /* contacto */
 .h2Contacto{
     background-color: whitesmoke;
@@ -375,15 +515,18 @@ footer{
 
 /* TENENCIA RESPONSABLE */
 
+
 .gridTenencia{
     display: grid;
     grid-template-columns: repeat(2 1fr);
-    grid-template-rows: 10em 3em 1em auto;
+    grid-template-rows: 5em 10em 3em 1em 5em;
     grid-template-areas:
+        "header         header"
         "foto           foto" 
         "titulo         titulo"
         "lista1         lista2"
-        "contenido1 contenido2";
+        "contenido1 contenido2"
+        "footer         footer";
     justify-items: center;
     height: 50em;
 }
