@@ -6,54 +6,45 @@
 }
 
 body{
-    background-color:white;
+    background-color: rgba(245, 242, 242, 0.706);
     
 }
 /* ----- HEADER ---------- */
 
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 2em;
-    grid-area: header;
+.header {
+    background-size: cover;  
 }
-
-.logo{
-    display: flex;
-    align-items: flex-end;
-    margin: 0.5em 0 0 2em;
-    width: 6em;
-    height: 6em;
+.navbar-brand img{
+    margin-left: 1.4em;
 }
-
-.header__navbar--principal{
+.navbar-nav{
     list-style-type: none;
-    text-align: center;
-    display: flex;
     justify-content: space-between;
-    margin-left: 2em;
-    gap: 20px;
-    
+    gap: 50px;
+    margin-left: 5em;
 }
- .header__navbar li{
+ .nav-item{
      text-decoration: none;
      background-color:rgb(251, 230, 237);
-     padding: 0.7rem;
+     padding: 0.3rem;
     
 }
-.header__navbar a{
+.nav-link{
     color: black;
     text-decoration: none;
-    padding: 0.7rem;
+    padding: 0.1rem;
     text-transform: uppercase;
-    font-size: medium;
-    font-weight: 500;
 }
-.header__navbar li:hover{
+.nav-item :hover{
     background-color: rgb(223, 189, 200);
     transition: 0.6s;
 }
+
+.btn{
+    color: rgb(223, 189, 200);
+    border-color:rgb(223, 189, 200) ;
+}
+
 /* footer */
 
 footer{
@@ -91,53 +82,57 @@ footer{
 
 /* index */
 
+.gridIndex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5em 4em 40em 20em 10em 5em;
+    grid-template-areas:
+        "header header header header"
+        " . titulo titulo . " 
+        "fondo  fondo  fondo  fondo"
+        "texto1  texto1  texto1  texto1"
+        "texto2  texto2  texto2  texto2"
+        "footer footer footer footer";
+    justify-content: center;
+    gap: 5px;
+}
 .titulo{
-    display: flex;
     align-items: center;
-    
     text-transform: uppercase;
     background-color: rgb(251, 230, 237);
     margin: 0 auto;
     padding: 0.4rem;  
 }
-.gridIndex{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 5em 4em 10em 3em 10em 5em;
-    grid-template-areas:
-        "header header header header"
-        " . titulo titulo . " 
-        "fondo  fondo  texto1  texto1"
-        "fondo  fondo  texto1  texto1"
-        "fondo  fondo  texto2  texto2"
-        "fondo  fondo  texto2  texto2"
-        "footer footer footer footer";
-    justify-content: center;
-    gap: 5px;
+.header{
+    grid-area: header;
 }
 .tituloIndex{
     grid-area: titulo;
 }
 .fotoIndex{
     grid-area: fondo;
-    margin-top: 2em;
     margin-bottom: 2em;
-    width: 70em;
+    width: 100%;
+    height: 800px;
+    margin-top: 2em;
 }
 .textoIndex1{
     grid-area: texto1;
-    margin-top: 5em;
-    padding: 2em;
-    font-size: 20px;
-    line-height: 3em;
+    margin-top: 7em;
+    padding: 4em;
+    font-size: 23px;
+    line-height: 2em;
     
 }
 .textoIndex2{
     grid-area: texto2;
-    margin-top: 10em;
-    margin-left: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16em;
     padding: 4em;
-    line-height: 5em;
+    line-height: 2em;
 }
 
 .textoIndex2 a{
@@ -161,38 +156,46 @@ footer{
     .gridIndex{
         display: grid;
         grid-template-columns: 40% 40%;
-        grid-template-rows: 5em 5em 5em 5em 5em;
+        grid-template-rows: 5em 5em 10em 7em 5em;
         grid-template-areas: 
             "header header"
             "titulo titulo"
-            "foto foto"
+            "fondo fondo"
             "texto1  texto1"
             "texto2  texto2"
             "footer footer";
     }
     .tituloIndex{
         grid-area: titulo;
-        margin-top: 1em;
+        
         text-align: center;
     }
     .fotoIndex{
-        grid-area: foto;
-        width: 30em;
+        grid-area: fondo;
+        width: 100%;
+        height: 500px;
         margin: 0 auto;
         margin-top: 2em;
     }
     .textoIndex1{
         grid-area: texto1;
-        margin-top: 20em;
+        margin-top: 23em;
         font-size: 15px;
         line-height: 1.5em;
     }
     .textoIndex2{
         grid-area: texto2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         font-size: 10px;
         line-height: 3em;
-        margin-top: 30em;
-        margin-left: 31em;
+        margin-top: 43em;
+        align-items: center;
+        
+    }
+    .textoIndex2 p{
+        display: none;
     }
     
     .textoIndex2 a{
@@ -201,38 +204,27 @@ footer{
         color: black;
         border: dotted 0.4em rgb(251, 230, 237);
         text-align: center;
-        margin-top: 0.7em;
-        padding: 0.3em;
+        padding: 0.1em;
         
     }
-    .inicio__boton a{
-        text-decoration: none;
-        color: black;
-    }
 
-    .header__navbar ul{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    }
     footer{
         grid-area: footer;
-        margin-top: 23em;
+        margin-top: 28em;
         height: 9em;
-        padding: 3em;
+        padding: 2em;
     }
-
+}
 /* CELULAR */ 
 @media (min-width: 320px) and (max-width: 576px){
     .gridIndex{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2em 3em 5em 5em 5em;
+        grid-template-rows: 0.2em 3em 17em 12em 5em;
         grid-template-areas: 
             "header"
             "titulo"
-            "foto"
+            "fondo"
             "texto1"
             "texto2"
             "footer";
@@ -243,26 +235,26 @@ footer{
        font-size: 20px;
     }
     .fotoIndex{
-        grid-area: foto;
-        width: 30em;
+        grid-area: fondo;
+        width: 100%;
+        height: 500px;
         margin-top: 1em;
-        margin-left: 2.6em;
-        padding: 2em;
     }
     .textoIndex1{
         grid-area: texto1;
-        margin-top: 18em;
+        margin-top: 17em;
         font-size: 15px;
         line-height: 1em;
     }
     .textoIndex2{
-        line-height: 1.7em;
-        margin-top: 16em;
-        margin-left: 10em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 18em;
+        
     }
-    .textoIndex2 a{
-        padding: 0.1em;
-        font-size: small;
+    .textoIndex2 p{
+        display: none;
     }
     header{
         padding: 1em;
