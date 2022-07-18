@@ -20,8 +20,8 @@ body{
 .navbar-nav{
     list-style-type: none;
     justify-content: space-between;
-    gap: 50px;
-    margin-left: 5em;
+    gap: 40px;
+    margin-left: 2em;
 }
  .nav-item{
      text-decoration: none;
@@ -374,14 +374,14 @@ section{
 @media (min-width: 577px) and (max-width: 991px) {
     .gridAdopta{
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 5em 3em 5em 5em 5em;
         grid-template-areas: 
-            "header header header"
-            "conoce conoce conoce"
-            "galeria galeria galeria"
-            "adopta adopta adopta"
-            "footer footer footer";
+            "header header"
+            "conoce conoce"
+            "galeria galeria"
+            "adopta adopta"
+            "footer footer";
         justify-content: center;
     }
    
@@ -419,7 +419,7 @@ section{
     .adopta__img img{
         width: 150px;
     }
-    .adoptaForm{
+    .adoptaLink h2{
         display: none;
     }
     .adoptaLink a{
