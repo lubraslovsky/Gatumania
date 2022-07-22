@@ -306,126 +306,33 @@ section{
 /* adopta */
 
 .h2Adopta{
-    background-color: whitesmoke;
-    max-width: fit-content;
+    background-color: rgb(213, 189, 205);
     margin: 2em auto;
-    padding: 0.4rem;
+    padding: 0.3em;
+    max-width: fit-content;   
 }
 
-.galeriaAdopta{
-    margin: 1em 0 0 1em;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-
-}
-.adopta__img{
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-}
-.adopta__img img{
-    width: 400px;
-    margin: 1em; 
-}
-.a__adopta{
-    color: black;
-    text-decoration: none;
+.card-title{
     text-transform: uppercase;
-    margin-top: 1em;
+    font-size: 30px;
+    color: rgb(241, 212, 232);  
+}
+.card-text{
+    background-color: rgb(241, 212, 232);
+    padding: 0.2em;
+}
+.btn-primary{
+    background-color: whitesmoke;
+    text-transform: uppercase;
     font-size: 20px;
-    text-align: center;
 }
-.adoptaLink{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.gridAdopta{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 5em 5em 30em 30em 15em 5em;
-    grid-template-areas: 
-        "header header header header"
-        "conoce conoce conoce conoce"
-        "galeria galeria galeria galeria"
-        "galeria galeria galeria galeria"
-        ". adopta adopta ."
-        "footer footer footer footer";
-        justify-content: center;
-}
-.adoptaConoce{
-    grid-area: conoce;
-}
-.galeriaAdopta{
-    grid-area: galeria;
-}
-.adoptaLink{
-    grid-area: adopta;
-    margin-top: 45em;   
+.btn-primary:hover{
+    background-color: rgb(202, 196, 196);
+    border-color: rgb(202, 196, 196);
+    transition: 1.4s;
 }
 .footerAdopta{
-    grid-area: footer;
-    margin-top: 43em;
-}
-
-/* TABLET */ 
-@media (min-width: 577px) and (max-width: 991px) {
-    .gridAdopta{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 5em 3em 5em 5em 5em;
-        grid-template-areas: 
-            "header header"
-            "conoce conoce"
-            "galeria galeria"
-            "adopta adopta"
-            "footer footer";
-        justify-content: center;
-    }
-   
-    .galeriaAdopta{
-        margin-top: 6em;
-    }
-    .adopta__img img{
-        width: 200px;
-    }
-    .adoptaForm{
-        font-size: medium;
-        margin-top: 4em;
-    }
-    
-    .footerAdopta{
-        margin-top: 50em;
-    }
-}
-
-/* CELULAR */ 
-@media (min-width: 320px) and (max-width: 576px){
-    .gridAdopta{
-        grid-template-columns: 1fr;
-        grid-template-rows: 5em 5em 25em 15em 5em;
-        grid-template-areas:
-            "header"
-            "conoce"
-            "galeria"
-            "adopta"
-            "footer";
-    }
-    .galeriaAdopta{
-        margin-top: 2em;
-    }
-    .adopta__img img{
-        width: 150px;
-    }
-    .adoptaLink h2{
-        display: none;
-    }
-    .adoptaLink a{
-        align-items: center;
-        margin-top: 14em;
-    }
+    margin-top: 10em;
 }
 /* contacto */
 .h2Contacto{
