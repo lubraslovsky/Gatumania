@@ -14,9 +14,7 @@ body{
 .header {
     background-size: cover;  
 }
-.navbar-brand img{
-    
-}
+
 .navbar-nav{
     list-style-type: none;
     justify-content: space-between;
@@ -32,13 +30,18 @@ body{
 .nav-link{
     color: black;
     text-decoration: none;
-    padding: 0.1rem;
+    padding: 0.25rem;
     text-transform: uppercase;
+}
+.nav-item :visited{
+    color: rgb(149, 149, 149);
 }
 .nav-item :hover{
     background-color: rgb(223, 189, 200);
     transition: 0.6s;
+    text-decoration: underline;
 }
+
 
 .btn{
     color: rgb(223, 189, 200);
@@ -48,15 +51,10 @@ body{
 /* footer */
 
 footer{
-    background-color: bisque;
+    background-color: rgb(251, 230, 237);
     text-align: center;
     grid-area: footer;
-    margin-top: 10em;
-}
-
-.footer__h3{
-    text-transform: lowercase;
-    
+    margin-top: 20em;
 }
 
 .footer__h4{
@@ -70,7 +68,6 @@ footer{
     color: black;
     font-weight: 400;
     margin-right: 2rem;
-
 }
 
 .footer__ig{
@@ -78,6 +75,10 @@ footer{
     font-weight: 300;
     text-decoration: none;
     text-transform: lowercase;
+}
+.footer a:hover{
+    color: black;
+    text-decoration: underline;
 }
 
 /* index */
@@ -335,6 +336,7 @@ section{
 .footerAdopta{
     margin-top: 10em;
 }
+
 /* contacto */
 .h2Contacto{
     background-color: whitesmoke;
