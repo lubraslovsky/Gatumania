@@ -6,24 +6,17 @@
 }
 
 body{
-    background-color: rgba(245, 242, 242, 0.706);
-    
+    background-color: rgba(245, 242, 242, 0.706);  
 }
 /* ----- HEADER ---------- */
-
-.header {
-    background-size: cover;  
-}
 
 .navbar-nav{
     list-style-type: none;
     justify-content: space-between;
-    gap: 20px;
-    
+    gap: 20px;  
 }
  .nav-item{
      text-decoration: none;
-     background-color:rgb(251, 230, 237);
      padding: 0.1rem;
     
 }
@@ -41,8 +34,6 @@ body{
     transition: 0.6s;
     text-decoration: underline;
 }
-
-
 .btn{
     color: rgb(223, 189, 200);
     border-color:rgb(223, 189, 200) ;
@@ -53,30 +44,18 @@ body{
 footer{
     background-color: rgb(251, 230, 237);
     text-align: center;
-    grid-area: footer;
-    margin-top: 20em;
+    height: 6em;
+    padding: 2em;
 }
 
-.footer__h4{
-    text-transform: lowercase;
-    font-size: smaller;
-    font-weight: 200;
-}
-
-.footer__mail{
+.footer__link {
     text-decoration: none;
+    text-transform: uppercase;
     color: black;
     font-weight: 400;
-    margin-right: 2rem;
 }
 
-.footer__ig{
-    color: black;
-    font-weight: 300;
-    text-decoration: none;
-    text-transform: lowercase;
-}
-.footer a:hover{
+.footer__link:hover{
     color: black;
     text-decoration: underline;
 }
@@ -86,44 +65,41 @@ footer{
 .gridIndex{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 5em 4em 40em 20em 10em 5em;
+    grid-template-rows: 5em 4em 30em 20em 10em 5em;
     grid-template-areas:
         "header header header header"
         " . titulo titulo . " 
-        "fondo  fondo  fondo  fondo"
+        " .  fondo  fondo  ."
         "texto1  texto1  texto1  texto1"
         "texto2  texto2  texto2  texto2"
         "footer footer footer footer";
     justify-content: center;
     gap: 5px;
 }
-.titulo{
+header{
+    grid-area: header;
+}
+.tituloIndex{
+    grid-area: titulo;
     align-items: center;
     text-transform: uppercase;
     background-color: rgb(251, 230, 237);
     margin: 0 auto;
     padding: 0.4rem;  
 }
-.header{
-    grid-area: header;
-}
-.tituloIndex{
-    grid-area: titulo;
-}
+
 .fotoIndex{
     grid-area: fondo;
     margin-bottom: 2em;
-    width: 100%;
-    height: 800px;
+    width: 800px;
     margin-top: 2em;
 }
 .textoIndex1{
     grid-area: texto1;
-    margin-top: 7em;
+    margin-top: 2em;
     padding: 4em;
     font-size: 23px;
     line-height: 2em;
-    
 }
 .textoIndex2{
     grid-area: texto2;
@@ -131,26 +107,21 @@ footer{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 16em;
+    margin-top: 3em;
     padding: 4em;
     line-height: 2em;
 }
 
 .textoIndex2 a{
     text-decoration: none;
-    font-size: large;
+    font-size: 24px;
     color: black;
     border: dotted 0.4em rgb(251, 230, 237);
     text-align: center;
     margin-top: 1em;
     padding: 0.7em;
-    
-    
 }
-.inicio__boton a{
-    text-decoration: none;
-    color: black;
-}
+
 
 /* TABLET */ 
 @media (min-width: 577px) and (max-width: 991px) {
@@ -280,34 +251,12 @@ footer{
     }
 }
 
-/* formulario */
-
-.h2Formulario{
-    background-color: whitesmoke;
-    max-width: fit-content;
-    margin: 0 auto;
-    padding: 0.4rem;
-}
-.link__formulario{
-    text-decoration: none;
-    text-transform: uppercase;
-    
-}
-
-.section__contacto a{
-    color: black;
-    
-}
-section{
-    margin-bottom: 3rem;
-}
-
-
-
 /* adopta */
 
 .h2Adopta{
-    background-color: rgb(213, 189, 205);
+    color: rgb(213, 189, 205);
+    font-size: 40px;
+    text-transform: uppercase;
     padding: 0.3em;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -392,11 +341,13 @@ section{
 /* FORMULARIO */
 
 .h2Formulario{
-    background-color: rgb(213, 189, 205);
+    color: rgb(213, 189, 205);
+    font-size: 40px;
+    text-transform: uppercase;
     padding: 0.3em;
     margin-top: 2em;
     margin-bottom: 2em;
-    max-width: fit-content;
+    
 }
 .formulario{
     margin-top: 3em;
@@ -405,7 +356,18 @@ section{
 .formulario__label{
     font-size: 18px;
 }
+.link__formulario{
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
+.section__contacto a{
+    color: black;
+    
+}
+section{
+    margin-bottom: 3rem;
+}
 
 
 
@@ -415,11 +377,10 @@ section{
 .gridTenencia{
     display: grid;
     grid-template-columns: repeat(2 1fr);
-    grid-template-rows: 5em 10em 3em 1em 5em;
+    grid-template-rows: 5em 10em 1em 5em;
     grid-template-areas:
         "header         header"
         "foto           foto" 
-        "titulo         titulo"
         "lista1         lista2"
         "contenido1 contenido2"
         "footer         footer";
@@ -432,12 +393,6 @@ section{
     justify-content: center;
     text-align: center;
     width: 8em;
-}
-.tituloTenencia{
-    grid-area: titulo;
-    text-align: center;
-    background-color: whitesmoke;
-    padding: 0.5em;
 }
 
 .pTenencia1{
@@ -537,11 +492,12 @@ section{
 }
 
 .h2Quienes{
-    background-color: whitesmoke;
-    max-width: fit-content;
-    margin: 0 auto;
-    padding: 0.4rem;
-
+    color: rgb(213, 189, 205);
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 0.3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .button__quienesomos{
