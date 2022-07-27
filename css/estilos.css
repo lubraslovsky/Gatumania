@@ -296,68 +296,25 @@ header {
       line-height: 3em; }
 
 /* QUIENES SOMOS */
-.sectionQuienes .h2Quienes {
+.h2Quienes {
   color: #d5bdcd;
   font-size: 40px;
   text-transform: uppercase;
   padding: 0.3em;
-  margin-top: 2em;
-  margin-bottom: 2em; }
+  margin-top: 2em; }
 
-.sectionQuienes .p__quienesomos {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  line-height: 2em;
+.p__quienes {
+  padding: 3em;
   text-align: center; }
+  .p__quienes--buton {
+    background-color: whitesmoke;
+    border: solid;
+    color: black;
+    padding: 0.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em; }
 
-.sectionQuienes .gridQuienes {
-  height: 35em;
-  display: grid;
-  grid-template-columns: repeat(4 1fr);
-  grid-template-rows: 1em 2em 10em 3em 10em;
-  grid-template-areas: "titulo titulo titulo titulo" "subtitulo subtitulo subtitulo subtitulo" "img1 img2 img3 img4" "blanco blanco blanco blanco" "img5 img6 img7 img8";
-  justify-items: center; }
-  .sectionQuienes .gridQuienes .gastos1 {
-    grid-area: titulo;
-    text-decoration: underline black; }
-  .sectionQuienes .gridQuienes .p__quienesomos1 {
-    grid-area: subtitulo;
-    margin-top: 2em; }
-    .sectionQuienes .gridQuienes .p__quienesomos1 .button__quienesomos {
-      background-color: whitesmoke;
-      border: solid;
-      color: black;
-      padding: 0.3em;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 1.2em; }
-  .sectionQuienes .gridQuienes img {
-    margin-top: 2em;
-    width: 250px;
-    padding: 2em;
-    align-items: center; }
-
-.img1 {
-  grid-area: img1; }
-
-.img2 {
-  grid-area: img2; }
-
-.img3 {
-  grid-area: img3; }
-
-.img4 {
-  grid-area: img4; }
-
-.img5 {
-  grid-area: img5; }
-
-.img6 {
-  grid-area: img6; }
-
-.img7 {
-  grid-area: img7; }
-
-.img8 {
-  grid-area: img8; }
+.footerQuienes {
+  margin-top: 3em; }
