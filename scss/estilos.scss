@@ -234,8 +234,8 @@ header{
 /* adopta */
 
 .h2Adopta{
-    color: rgb(213, 189, 205);
-    font-size: 40px;
+    color: $color-h2;
+    font-size: $fontsize-h2;
     text-transform: uppercase;
     padding: 0.3em;
     margin-top: 2em;
@@ -270,6 +270,8 @@ header{
 
 /* contacto */
 .h2Contacto{
+    color: $color-h2;
+    font-size: $fontsize-h2;
     background-color: whitesmoke;
     max-width: fit-content;
     margin: 0 auto;
@@ -319,8 +321,8 @@ header{
 /* FORMULARIO */
 
 .h2Formulario{
-    color: rgb(213, 189, 205);
-    font-size: 40px;
+    color: $color-h2;
+    font-size: $fontsize-h2;
     text-transform: uppercase;
     padding: 0.3em;
     margin-top: 2em;
@@ -388,8 +390,8 @@ header{
 /* QUIENES SOMOS */
 
 .h2Quienes{
-        color: rgb(213, 189, 205);
-        font-size: 40px;
+        color: $color-h2;
+        font-size: $fontsize-h2;
         text-transform: uppercase;
         padding: 0.3em;
         margin-top: 2em;
@@ -398,14 +400,13 @@ header{
         padding: 3em;
         text-align: center;
         &--buton{
-            background-color: whitesmoke;
-                border: solid;
-                color: black;
-                padding: 0.3em;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 1.2em;
+            color: $color-btn;
+            border: solid $border-btn;
+            padding: 0.3em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2em;
         }
     }
 
