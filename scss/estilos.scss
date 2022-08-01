@@ -242,7 +242,7 @@ header{
 /* adopta */
 
 .h2Adopta{
-    @include titulo($color-h2, $fontsize-h2, uppercase)
+    @include titulo($color-h2, $fontsize-h2, uppercase);
     padding: 0.3em;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -276,7 +276,7 @@ header{
 
 /* contacto */
 .h2Contacto{
-    @include titulo($color-h2, $fontsize-h2, uppercase)
+    @include titulo($color-h2, $fontsize-h2, uppercase);
     background-color: whitesmoke;
     max-width: fit-content;
     margin: 0 auto;
@@ -326,7 +326,7 @@ header{
 /* FORMULARIO */
 
 .h2Formulario{
-    @include titulo($color-h2, $fontsize-h2, uppercase)
+    @include titulo($color-h2, $fontsize-h2, uppercase);
     padding: 0.3em;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -393,7 +393,7 @@ header{
 /* QUIENES SOMOS */
 
 .h2Quienes{
-    @include titulo($color-h2, $fontsize-h2, uppercase)
+    @include titulo($color-h2, $fontsize-h2, uppercase);
     padding: 0.3em;
     margin-top: 2em;
     }
