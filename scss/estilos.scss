@@ -10,6 +10,14 @@
 body{
     background-color: rgba(245, 242, 242, 0.706);  
 }
+
+/* MIXIN */
+@mixin titulo($color, $font-size, $text-transform){
+    color: $color;
+    font-size: $font-size;
+    text-transform: $text-transform;
+}
+
 /* ----- HEADER ---------- */
 
 .navbar-nav{
@@ -234,9 +242,7 @@ header{
 /* adopta */
 
 .h2Adopta{
-    color: $color-h2;
-    font-size: $fontsize-h2;
-    text-transform: uppercase;
+    @include titulo($color-h2, $fontsize-h2, uppercase)
     padding: 0.3em;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -270,8 +276,7 @@ header{
 
 /* contacto */
 .h2Contacto{
-    color: $color-h2;
-    font-size: $fontsize-h2;
+    @include titulo($color-h2, $fontsize-h2, uppercase)
     background-color: whitesmoke;
     max-width: fit-content;
     margin: 0 auto;
@@ -321,9 +326,7 @@ header{
 /* FORMULARIO */
 
 .h2Formulario{
-    color: $color-h2;
-    font-size: $fontsize-h2;
-    text-transform: uppercase;
+    @include titulo($color-h2, $fontsize-h2, uppercase)
     padding: 0.3em;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -390,11 +393,9 @@ header{
 /* QUIENES SOMOS */
 
 .h2Quienes{
-        color: $color-h2;
-        font-size: $fontsize-h2;
-        text-transform: uppercase;
-        padding: 0.3em;
-        margin-top: 2em;
+    @include titulo($color-h2, $fontsize-h2, uppercase)
+    padding: 0.3em;
+    margin-top: 2em;
     }
 .p__quienes{
         padding: 3em;
