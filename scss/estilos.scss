@@ -70,6 +70,7 @@ footer{
 
 /* index */
 
+
 .gridIndex{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -83,28 +84,33 @@ footer{
         "footer footer footer footer";
     justify-content: center;
     gap: 5px;
-    .tituloIndex{
-        grid-area: titulo;
-        align-items: center;
-        text-transform: uppercase;
-        background-color: rgb(251, 230, 237);
-        margin: 0 auto;
-        padding: 0.4rem;  
-    }
-    .fotoIndex{
-        grid-area: fondo;
-        margin-bottom: 2em;
-        width: 800px;
-        margin-top: 2em;
-    }
-    .textoIndex1{
-        grid-area: texto1;
-        margin-top: 2em;
-        padding: 4em;
-        font-size: 23px;
-        line-height: 2em;
-    }
-    .textoIndex2{
+}
+header{
+    grid-area: header;
+}
+.tituloIndex{
+    grid-area: titulo;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgb(251, 230, 237);
+    margin: 0 auto;
+    padding: 0.4rem;  
+}
+
+.fotoIndex{
+    grid-area: fondo;
+    margin-bottom: 2em;
+    width: 800px;
+    margin-top: 2em;
+}
+.textoIndex1{
+    grid-area: texto1;
+    margin-top: 2em;
+    padding: 4em;
+    font-size: 23px;
+    line-height: 2em;
+}
+.textoIndex2{
     grid-area: texto2;
     display: flex;
     flex-direction: column;
@@ -113,20 +119,18 @@ footer{
     margin-top: 3em;
     padding: 4em;
     line-height: 2em;
-    & a{
-        text-decoration: none;
-        font-size: 24px;
-        color: black;
-        border: dotted 0.4em rgb(251, 230, 237);
-        text-align: center;
-        margin-top: 1em;
-        padding: 0.7em;
-    }
-    }
 }
-header{
-    grid-area: header;
+
+.textoIndex2 a{
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    border: dotted 0.4em rgb(251, 230, 237);
+    text-align: center;
+    margin-top: 1em;
+    padding: 0.7em;
 }
+
 
 /* TABLET */ 
 @media (min-width: 577px) and (max-width: 991px) {
@@ -144,6 +148,7 @@ header{
     }
     .tituloIndex{
         grid-area: titulo;
+        
         text-align: center;
     }
     .fotoIndex{
@@ -168,19 +173,22 @@ header{
         line-height: 3em;
         margin-top: 43em;
         align-items: center;
-        & p{
-            display: none;
-        }
-        & a{
-            text-decoration: none;
-            font-size: small;
-            color: black;
-            border: dotted 0.4em rgb(251, 230, 237);
-            text-align: center;
-            padding: 0.1em;
-            
-        }
+        
     }
+    .textoIndex2 p{
+        display: none;
+    }
+    
+    .textoIndex2 a{
+        text-decoration: none;
+        font-size: small;
+        color: black;
+        border: dotted 0.4em rgb(251, 230, 237);
+        text-align: center;
+        padding: 0.1em;
+        
+    }
+
     footer{
         grid-area: footer;
         margin-top: 28em;
@@ -188,13 +196,12 @@ header{
         
     }
 }
-
 /* CELULAR */ 
 @media (min-width: 320px) and (max-width: 576px){
     .gridIndex{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2em 3em 17em 12em 5em;
+        grid-template-rows: 0.2em 3em 17em 12em 20em 10em;
         grid-template-areas: 
             "header"
             "titulo"
@@ -225,12 +232,26 @@ header{
         flex-direction: row;
         justify-content: space-around;
         margin-top: 18em;
-        & p{
-            display: none;
-        }
+        
+    }
+    .textoIndex2 p{
+        display: none;
     }
     header{
         padding: 1em;
+    }
+    .header__navbar ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .header__navbar li{
+        margin: 0.3em;
+    }
+    .logo{
+        width: 6.5em;
+        height: 6.5em;
+        margin-right: 1em;
     }
     .footer{
         grid-area: footer;
@@ -238,6 +259,7 @@ header{
         margin-top: 22em;
     }
 }
+
 
 /* adopta */
 
@@ -342,53 +364,21 @@ header{
 
 /* TENENCIA RESPONSABLE */
 
-.gridTenencia{
-    display: grid;
-    grid-template-columns: repeat(2 1fr);
-    grid-template-rows: 5em 10em 1em 5em;
-    grid-template-areas:
-        "header         header"
-        "foto           foto" 
-        "lista1         lista2"
-        "contenido1 contenido2"
-        "footer         footer";
-    justify-items: center;
-    height: 50em;
-    .imgTenencia{
-        grid-area: foto;
-        justify-content: center;
-        text-align: center;
-        width: 8em;
-    }
-    .pTenencia1{
-        grid-area: lista1;
-        text-align: center;
-        padding-top: 1.3em;
-        font-size: 2em;
-        color: palevioletred;
-        text-decoration: underline palevioletred;
-    }
-    .pTenencia2{
-        grid-area: lista2;
-        text-align: center;
-        padding-top: 1.3em;
-        font-size: 2em;
-        color: palevioletred;
-        text-decoration: underline palevioletred;
-        .listaTenencia1{
-            grid-area: contenido1;
-            text-align: center;
-            padding-top: 5em;
-            line-height: 3em;
-        }
-        .listaTenencia2{
-            grid-area: contenido2;
-            text-align: center;
-            padding-top: 5em;
-            line-height: 3em;
-        }
-    }
+.imgTenencia{
+    width: 16em;
+    display: block;
+    margin: 0 auto;
+    padding: 2em 0 4em 0;
 }
+
+.accordion-button{
+   color: rgb(221, 153, 217);
+   font-size: 25px;
+}
+.accordion-body{
+    font-size: 20px;
+}
+
 
 /* QUIENES SOMOS */
 
@@ -410,7 +400,10 @@ header{
             font-size: 1.2em;
         }
     }
+    .carousel-item img{
+        width: 300px;
 
+    }
 .footerQuienes{
     margin-top: 3em;
 }
