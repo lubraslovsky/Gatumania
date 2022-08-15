@@ -18,6 +18,13 @@ body{
     text-transform: $text-transform;
 }
 
+@mixin boton($background-color, $color, $border-color){
+    background-color: $background-btn;
+    color: $color-btn;
+    border-color: $border-btn;
+}
+    
+
 /* ----- HEADER ---------- */
 
 .navbar-nav{
@@ -44,24 +51,26 @@ body{
    }
 }
 
-.btn{
-    color: rgb(223, 189, 200);
-    border-color:rgb(223, 189, 200);
-}
-
 /* footer */
 
 footer{
     background-color: rgb(251, 230, 237);
     text-align: center;
-    height: 6em;
-    padding: 2em;
-    .div .footer__link {
+    height: 7em;
+    padding: 1.5em;
+    div{
+        padding: 0.3em;
+    }
+    div img{
+        width: 25px;
+        height: 25px;
+    }
+    div a{
         text-decoration: none;
         text-transform: uppercase;
         color: black;
         font-weight: 400;
-        .footer__link:hover{
+        &:hover{
             color: black;
             text-decoration: underline;
         }
@@ -265,64 +274,83 @@ header{
 
 .h2Adopta{
     @include titulo($color-h2, $fontsize-h2, uppercase);
+    text-align: center;
     padding: 0.3em;
-    margin-top: 2em;
-    margin-bottom: 2em;
     max-width: fit-content;   
+}
+.container{
+   text-align: center;
+    width: 160em;
+    .card{
+    margin: 2em;
+        & img{
+            padding: 1em;
+        }
+    }
+
 }
 .card-body{
     .card-title{
         text-transform: uppercase;
         font-size: 30px;
         color: rgb(241, 212, 232);  
-    }
+        }
     .card-text{
         background-color: rgb(241, 212, 232);
         padding: 0.2em;
-    }
-    .btn-primary{
-        background-color: whitesmoke;
+        }
+}
+.btn-primary{
+        @include boton($background-btn, $color-btn, $border-btn);
         text-transform: uppercase;
         font-size: 20px;
-        & :hover{
-            background-color: rgb(202, 196, 196);
+        &:hover{
+            background-color: rgb(204, 135, 181);
             border-color: rgb(202, 196, 196);
             transition: 1.4s;
+            }
         }
-    }
-}
-
+ 
 .footerAdopta{
     margin-top: 10em;
 }
 
 /* contacto */
-.h2Contacto{
-    @include titulo($color-h2, $fontsize-h2, uppercase);
-    background-color: whitesmoke;
-    max-width: fit-content;
-    margin: 0 auto;
-    padding: 0.4rem;
-}
 .contactoLink{
-    display: flex;
-    flex-direction: column;
-    .a__contacto{
+    text-align: center;
+    .h2Contacto{
+        @include titulo($color-h2, $fontsize-h2, uppercase);
+        background-color: whitesmoke;
+        }
+    .contactoBoton{
+        @include boton($background-btn, $color-btn, $border-btn);
         text-decoration: none;
         text-transform: uppercase;
-        margin-top: 1em;
-        font-size: 20px;
-        text-align: center;
+        padding: 1em;
+        &:hover{
+            background-color: rgb(204, 135, 181);
+            border-color: rgb(202, 196, 196);
+            transition: 1.4s;
+            }
+        }
     }
-}
+   
+
 .section__contacto{
     margin-bottom: 3em;
+    .h2Contacto{
+        @include titulo($color-h2, $fontsize-h2, uppercase);
+        background-color: whitesmoke;
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 0.4rem;
+        }
 }
 
 .contactoForm{
     display: flex;
     flex-direction: column;
-    margin: 5em; 
+    margin: 2em; 
     .contactoInput{
         height: 3em;
         margin-bottom: 1em;
@@ -349,13 +377,14 @@ header{
 
 .h2Formulario{
     @include titulo($color-h2, $fontsize-h2, uppercase);
-    padding: 0.3em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    
+    background-color: whitesmoke;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0.4rem;
 }
 .formulario{
     margin-top: 3em;
+    width: 80em;
     height: 60em;
     &__label{
         font-size: 18px;
@@ -370,7 +399,11 @@ header{
     margin: 0 auto;
     padding: 2em 0 4em 0;
 }
-
+.accordion{
+    width: 80em;
+    margin: auto;
+    margin-bottom: 2em;
+}
 .accordion-button{
    color: rgb(221, 153, 217);
    font-size: 25px;
@@ -384,25 +417,39 @@ header{
 
 .h2Quienes{
     @include titulo($color-h2, $fontsize-h2, uppercase);
+    display: inline-block;
+    text-align: center;
     padding: 0.3em;
     margin-top: 2em;
+    margin-left: 1.3em;
     }
+.p__quienesomos{
+    text-align: center;
+    width: 80%;
+    margin-left: 6.5em;
+}
 .p__quienes{
         padding: 3em;
         text-align: center;
-        &--buton{
-            color: $color-btn;
-            border: solid $border-btn;
-            padding: 0.3em;
+        &--button{
+            @include boton($background-btn, $color-btn, $border-btn);
+            text-transform: uppercase;
+            font-size: 20px;
+            border-radius: 10px;
             text-align: center;
-            text-decoration: none;
             display: inline-block;
-            font-size: 1.2em;
+            padding: 0.3em;
+            &:hover{
+            background-color: rgb(204, 135, 181);
+            border-color: rgb(202, 196, 196);
+            transition: 1.4s;
+            }
         }
     }
-    .carousel-item img{
-        width: 300px;
-
+    .carousel{
+        margin: auto;
+        width: 600px;
+        height: 600px;
     }
 .footerQuienes{
     margin-top: 3em;

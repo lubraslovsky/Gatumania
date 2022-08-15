@@ -1,3 +1,5 @@
+/* TITULOS */
+/* BOTONES */
 * {
   margin: 0;
   padding: 0;
@@ -28,22 +30,23 @@ body {
       padding: 0.25rem;
       text-transform: uppercase; }
 
-.btn {
-  color: #dfbdc8;
-  border-color: #dfbdc8; }
-
 /* footer */
 footer {
   background-color: #fbe6ed;
   text-align: center;
-  height: 6em;
-  padding: 2em; }
-  footer .div .footer__link {
+  height: 7em;
+  padding: 1.5em; }
+  footer div {
+    padding: 0.3em; }
+  footer div img {
+    width: 25px;
+    height: 25px; }
+  footer div a {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
     font-weight: 400; }
-    footer .div .footer__link .footer__link:hover {
+    footer div a:hover {
       color: black;
       text-decoration: underline; }
 
@@ -193,10 +196,17 @@ header {
   color: #d5bdcd;
   font-size: 40px;
   text-transform: uppercase;
+  text-align: center;
   padding: 0.3em;
-  margin-top: 2em;
-  margin-bottom: 2em;
   max-width: fit-content; }
+
+.container {
+  text-align: center;
+  width: 160em; }
+  .container .card {
+    margin: 2em; }
+    .container .card img {
+      padding: 1em; }
 
 .card-body .card-title {
   text-transform: uppercase;
@@ -207,12 +217,14 @@ header {
   background-color: #f1d4e8;
   padding: 0.2em; }
 
-.card-body .btn-primary {
-  background-color: whitesmoke;
+.btn-primary {
+  background-color: #f1d4e8;
+  color: #0b0a0a;
+  border-color: #eca9d7;
   text-transform: uppercase;
   font-size: 20px; }
-  .card-body .btn-primary :hover {
-    background-color: #cac4c4;
+  .btn-primary:hover {
+    background-color: #cc87b5;
     border-color: #cac4c4;
     transition: 1.4s; }
 
@@ -220,32 +232,40 @@ header {
   margin-top: 10em; }
 
 /* contacto */
-.h2Contacto {
-  color: #d5bdcd;
-  font-size: 40px;
-  text-transform: uppercase;
-  background-color: whitesmoke;
-  max-width: fit-content;
-  margin: 0 auto;
-  padding: 0.4rem; }
-
 .contactoLink {
-  display: flex;
-  flex-direction: column; }
-  .contactoLink .a__contacto {
+  text-align: center; }
+  .contactoLink .h2Contacto {
+    color: #d5bdcd;
+    font-size: 40px;
+    text-transform: uppercase;
+    background-color: whitesmoke; }
+  .contactoLink .contactoBoton {
+    background-color: #f1d4e8;
+    color: #0b0a0a;
+    border-color: #eca9d7;
     text-decoration: none;
     text-transform: uppercase;
-    margin-top: 1em;
-    font-size: 20px;
-    text-align: center; }
+    padding: 1em; }
+    .contactoLink .contactoBoton:hover {
+      background-color: #cc87b5;
+      border-color: #cac4c4;
+      transition: 1.4s; }
 
 .section__contacto {
   margin-bottom: 3em; }
+  .section__contacto .h2Contacto {
+    color: #d5bdcd;
+    font-size: 40px;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0.4rem; }
 
 .contactoForm {
   display: flex;
   flex-direction: column;
-  margin: 5em; }
+  margin: 2em; }
   .contactoForm .contactoInput {
     height: 3em;
     margin-bottom: 1em; }
@@ -266,12 +286,14 @@ header {
   color: #d5bdcd;
   font-size: 40px;
   text-transform: uppercase;
-  padding: 0.3em;
-  margin-top: 2em;
-  margin-bottom: 2em; }
+  background-color: whitesmoke;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 0.4rem; }
 
 .formulario {
   margin-top: 3em;
+  width: 80em;
   height: 60em; }
   .formulario__label {
     font-size: 18px; }
@@ -282,6 +304,11 @@ header {
   display: block;
   margin: 0 auto;
   padding: 2em 0 4em 0; }
+
+.accordion {
+  width: 80em;
+  margin: auto;
+  margin-bottom: 2em; }
 
 .accordion-button {
   color: #dd99d9;
@@ -295,23 +322,39 @@ header {
   color: #d5bdcd;
   font-size: 40px;
   text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
   padding: 0.3em;
-  margin-top: 2em; }
+  margin-top: 2em;
+  margin-left: 1.3em; }
+
+.p__quienesomos {
+  text-align: center;
+  width: 80%;
+  margin-left: 6.5em; }
 
 .p__quienes {
   padding: 3em;
   text-align: center; }
-  .p__quienes--buton {
-    color: #dfbdc8;
-    border: solid #dfbdc8;
-    padding: 0.3em;
+  .p__quienes--button {
+    background-color: #f1d4e8;
+    color: #0b0a0a;
+    border-color: #eca9d7;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 1.2em; }
+    padding: 0.3em; }
+    .p__quienes--button:hover {
+      background-color: #cc87b5;
+      border-color: #cac4c4;
+      transition: 1.4s; }
 
-.carousel-item img {
-  width: 300px; }
+.carousel {
+  margin: auto;
+  width: 600px;
+  height: 600px; }
 
 .footerQuienes {
   margin-top: 3em; }
